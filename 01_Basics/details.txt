@@ -1,8 +1,12 @@
 01. Scope/Block ==> {}
-02. Variables ==> Let, Const, Var
-    (Const can not be changed)
+02. Variables ==> Let, Const, Var.
+    (Const can not be changed).
 03. Alert()
-    (Message for User)
+    (Message for User).
 04. Prompt("")
     (Output)
-05. Data Types ==> int, String, float,
+05. Data Types ==> 
+    (int, String, boolean, bigint, null, undefined, symbol) Primitive Data Types.
+    (Object) Non Primitive Data Types.
+    Null is Object Dat Tpes.
+    (Typesof "";Variables) 
