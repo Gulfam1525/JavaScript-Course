@@ -1,0 +1,8 @@
+01. Scope/Block ==> {}
+02. Variables ==> Let, Const, Var
+    (Const can not be changed)
+03. Alert()
+    (Message for User)
+04. Prompt("")
+    (Output)
+05. Data Types ==> int, String, float,
