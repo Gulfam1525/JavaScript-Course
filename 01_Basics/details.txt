@@ -6,7 +6,7 @@
 04. Prompt("")
     (Output)
 05. Data Types ==> 
-    (int, String, boolean, bigint, null, undefined, symbol) Primitive Data Types.
+    (Number, String, boolean, bigint, null, undefined, symbol) Primitive Data Types.
     (Object) Non Primitive Data Types.
     Null is Object Dat Tpes.
     (Typesof "";Variables) 
