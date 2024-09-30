@@ -15,4 +15,10 @@
         Let numString = Number(accountName);
         "String can not b changed in Number Data Types"
     )
-    
+04. Operator (
+    1.Arthamatics Operator.
+    2.Assignment Operator.
+    3.Comparison Operator.
+    4.Logical Operator.
+    )
+ 05. Post Inrecrement & Pre Inrecrement   
