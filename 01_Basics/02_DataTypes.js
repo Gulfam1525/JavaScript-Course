@@ -5,10 +5,19 @@ let city;
 let ammount=null;
 
 
+
 console.log(typeof age);
 console.log(typeof accountStatus);
 console.log(typeof ammount);
 console.log(typeof city);
+
+
+let stringAge= String(age);
+console.log(typeof stringAge);
+
+
+console.log(age);
+console.log(typeof age);
 
 
  
