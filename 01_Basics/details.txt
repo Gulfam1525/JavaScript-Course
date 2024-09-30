@@ -9,4 +9,10 @@
     (Number, String, boolean, bigint, null, undefined, symbol) Primitive Data Types.
     (Object) Non Primitive Data Types.
     Null is Object Dat Tpes.
-    (Typesof "";Variables) 
+    (Typesof "";Variables).
+    DataTypes changed(
+        Let stringAge = String(age);
+        Let numString = Number(accountName);
+        "String can not b changed in Number Data Types"
+    )
+    
