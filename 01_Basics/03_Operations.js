@@ -40,7 +40,10 @@ console.log(x<=y);
 console.log(x>=y);
 console.log(y===z); // Data Type Check
 console.log(y==z);
-console.log(x!=z); 
+console.log(x!=z);
+
+console.log('5'==5);
+console.log('5'===5);
 
 
 
