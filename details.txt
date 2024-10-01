@@ -36,6 +36,6 @@
 
 11. Array .
     (Slice: show element and Splice: delete element)
-
+12. Object \\ w3school.com
 
     
