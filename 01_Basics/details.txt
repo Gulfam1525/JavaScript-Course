@@ -7,8 +7,9 @@
     (Output)
 05. Data Types ==> 
     (Number, String, boolean, bigint, null, undefined, symbol) Primitive Data Types.
-    (Object) Non Primitive Data Types.
-    Null is Object Dat Tpes.
+    (Object, Array, Function) Non Primitive Data Types.
+    Primitive data types are immutable, meaning their values cannot be changed once assigned. Non-primitive data types are mutable and can be modified.
+    Null is Object Data Types.
     (Typesof "";Variables).
     DataTypes changed(
         Let stringAge = String(age);
@@ -21,4 +22,10 @@
     3.Comparison Operator.
     4.Logical Operator.
     )
- 05. Post Inrecrement & Pre Inrecrement   
+05. Post Inrecrement & Pre Inrecrement
+     a++,++a & --a;a--
+06. Stack and Heap(
+    Stack ==> Primitive { Copy Variables}
+    Heap ==> Non Primitive {Refrence Variables}
+    )
+     
