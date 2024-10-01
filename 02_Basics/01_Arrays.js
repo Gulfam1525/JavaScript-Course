@@ -28,6 +28,9 @@ console.log(Langauge.slice(1,3));
 // console.log(Langauge.splice(0,4));
 
 
+let fruits = ['apple', 'banana', 'orange'];
+fruits.pop();
+console.log(fruits);
 
 
 

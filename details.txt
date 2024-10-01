@@ -36,3 +36,6 @@
 
 11. Array .
     (Slice: show element and Splice: delete element)
+
+
+    
