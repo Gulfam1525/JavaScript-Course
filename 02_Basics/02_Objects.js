@@ -54,3 +54,17 @@ const obj2={
 
 const obj3={...obj1,...obj2}
 console.log(obj3);
+
+
+
+// ===== Object.hasOwn()
+
+
+let student={
+    name:'gulfam',
+    email :'gulfam@google.com'
+}
+
+console.log(Object.hasOwn(student, 'name'));
+console.log(Object.hasOwn(student, 'age'));
+
