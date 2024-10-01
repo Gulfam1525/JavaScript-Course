@@ -26,6 +26,6 @@
      a++,++a & --a;a--
 06. Stack and Heap(
     Stack ==> Primitive { Copy Variables}
-    Heap ==> Non Primitive {Refrence Variables}
+    Heap ==> Non Primitive {Orginal Variables}
     )
      
