@@ -31,11 +31,10 @@
 07. String Method. // !Important
 08. Number Method & Math Object.
 09. Math Random 
-    ( console.log   ; )
+    ( console.log(Math.floor(Math.random()*(max - min + 1))+ min)   ; )
 10. Dates In Js (Object Types).
 
 11. Array .
     (Slice: show element and Splice: delete element)
 12. Object \\ w3school.com
-
-    
+13. Function
