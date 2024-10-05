@@ -94,23 +94,61 @@ for (let i = 0; i < arr2.length; i++) {
 /* 08. Squares of Numbers from 1 to 10: Write a for loop that prints the square of each number from 1 to 10. */
 
 
-for(let i=1; i<=10; i++){
+for (let i = 1; i <= 10; i++) {
     // console.log(i*i);
-    
+
 }
 
 /* 09. Count Down from 20 to 1: Write a for loop that counts down from 20 to 1 and prints each number. */
 
 
-for(let i=20; i>=1; i--){
+for (let i = 20; i >= 1; i--) {
     // console.log(i);
 }
 
 
 /* 10. Print the Multiplication Table of 3: Write a for loop to print the multiplication table of 3 (up to 10). */
 
-for(let i=1; i<=10; i++){
-    console.log(3*i);
+for (let i = 1; i <= 10; i++) {
+    // console.log(3*i);
+
+}
+
+
+/* 11. Print All Prime Numbers Between 1 and 50: Write a for loop to check and print all prime numbers between 1 and 50. */
+
+
+for (let i = 1; i <= 50; i++) {
+
+    if (i) {
+        // console.log(i);
+
+    }
+}
+
+
+/* 12. Sum of Odd Numbers from 1 to 100: Write a for loop that calculates the sum of all odd numbers between 1 and 100. */
+
+let sumOdd=0;
+
+for (let i = 1; i <= 100; i++) {
+    if(i % 2 == 1){
+        sumOdd +=i;
+    }
+}   
+
+// console.log(sumOdd);
+
+
+
+
+/* 13. Find Maximum Value in an Array: Write a for loop that finds the maximum value in a given */
+
+let arr13 = [5, 12, 3, 9, 21, 7];
+
+for(let i=0; i<=arr.length; i++){
+  let  maxValue = Math.max(arr13[i])
+    console.log(arr13[maxValue]);
     
 }
 

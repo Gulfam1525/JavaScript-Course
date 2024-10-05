@@ -44,4 +44,7 @@
     (
         If Else Condition
         Switch Cases
+        try catch
+        throw
     )
+17. Loops.
