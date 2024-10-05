@@ -40,3 +40,8 @@
 13. Function
 14. This Keywords (In JavaScript, the this keyword refers to an object.)
 15. Arrow Function.
+16. Control Flow.
+    (
+        If Else Condition
+        Switch Cases
+    )
