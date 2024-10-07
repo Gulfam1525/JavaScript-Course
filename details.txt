@@ -48,3 +48,4 @@
         throw
     )
 17. Loops.
+18. Filter , Map and Reduce;
