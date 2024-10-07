@@ -144,13 +144,15 @@ for (let i = 1; i <= 100; i++) {
 
 /* 13. Find Maximum Value in an Array: Write a for loop that finds the maximum value in a given */
 
-let arr13 = [5, 12, 3, 9, 21, 7];
-
+let arr13 = [5, 122, 3, 9, 21, 7];
+let  maxValue=0;
+let a;
 for(let i=0; i<=arr.length; i++){
-  let  maxValue = Math.max(arr13[i])
-    console.log(arr13[maxValue]);
+ a= arr[i]>maxValue
+   
     
 }
+console.log(a);
 
 
 

@@ -43,5 +43,59 @@ const people = [
     return num+2*5;
   }
   )
-  console.log(newScore);
+//   console.log(newScore);
+
+
+
+
+  /* +++++++++++++++++++ Chaning ++++++++++++++++++ */
+
+
+  let game = [20,10,30,15,5.19,23,34,10]
+
+  let newGame = game
+                    .map((value)=>{return value+5})
+                    .filter((value)=> value >=25)
+  // console.log(newGame);
+  
+
+
+
+  /* +++++++++++++++++++  Reduce ++++++++++++++++++ */
+
+
+  let value = [10,21,9,17]
+
+  const newValue = value.reduce((accu, currentValue)=>{
+    return accu+currentValue;
+  },0)
+
+  // console.log(newValue);
+
+
+
+  let shoppingCart= [
+    {
+      item: "Mobile",
+      price: 12000,
+    },
+    {
+      item: "Laptop",
+      price: 38000,
+    },
+    {
+      item: "Watch",
+      price: 4000,
+    }
+  ]
+
+  let itemPrice= shoppingCart.reduce((accu, currentValue)=>{
+    // console.log(shoppingCart);
+    
+    return accu+currentValue.price;
+  },0)
+
+  console.log(itemPrice);
+  
+  
   

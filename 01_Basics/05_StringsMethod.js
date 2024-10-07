@@ -16,7 +16,7 @@ console.log(myName.replace("gulfam" , "awais"));
 console.log(myName.repeat(5));
 
 let player= "Virat kholi";
-console.log(player.slice(6,11));
+console.log(player.slice(0,11));
 
 let student="Awais Ahmed";
 console.log(student.length);
