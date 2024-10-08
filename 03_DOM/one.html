@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .secdiv #p1,
+        #p2 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="maindiv">
+        <h1 id="title" class="heading">DOM</h1>
+        <button onclick="btn1()">Full Form</button>
+        <p id="p"></p>
+        <button onclick="btn2()">Show Text</button>
+    </div>
+    <div class="secdiv">
+        <h1 id="title" class="heading">Enter Ur Age</h1>
+        <!-- <p>your age min 18 then u can drive</p> -->
+        <input type="number" name="" id="age">
+        <p id="p1">You Can Drive</p>
+        <p id="p2">Can't Drive</p>
+        <button onclick="agebtn()">Submit</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function btn1() {
+        document.getElementById("title").innerHTML = "Document Object Moder";
+    }
+    function btn2() {
+        document.getElementById("p").innerHTML = "Hello World";
+    }
+  
+    function agebtn() {
+
+        let myAge = document.getElementById("age").value;
+    let pp1 = document.getElementById("p1");
+    let pp2 = document.getElementById("p2");
+
+        if (myAge >= 18) {
+            pp1.style.display = "block"
+        }
+        else {
+            pp2.style.display = "block"
+        }
+    }
+
+
+
+
+
+</script>
