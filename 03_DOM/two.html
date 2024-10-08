@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    let myParent = document.querySelector(".parent");
+    console.log(myParent);
+    
+    // let myday = myParent.forEach((day1) => {
+    //     day1[1].innerHTML="Holiday";
+    // });
+    // console.log(myday);
+
+   myParent.children[1].style.color="orange";
+   myParent.children[2].innerHTML="holiday";
+
+
+    
+
+
+</script>
