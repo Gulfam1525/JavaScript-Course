@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background: linear-gradient(135deg, #a8e0ff, #ffeb3b); */
+            background-color: black;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            transition: background 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        li:hover {
+            background: #e8e8e8;
+        }
+
+       
+    </style>
+</head>
+<html>
+
+<body>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task" />
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+ 
+    let textBtn = document.querySelector("#addTaskBtn")
+    textBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        let addText = document.querySelector("#taskInput").value;
+        let ul = document.querySelector("#taskList")
+        let li = document.createElement("li");
+        li.innerHTML = addText;
+        ul.appendChild(li);
+
+        let deleteBtn = document.createElement("button");
+        deleteBtn.innerText="Delete"
+        deleteBtn.style.background="red"
+        deleteBtn.style.color="white"
+        // deleteBtn.style.marginLeft="10px"
+        deleteBtn.style.borderRadius="10px"
+        deleteBtn.style.width="70px"
+        li.appendChild(deleteBtn);
+
+        let editBtn = document.createElement("button");
+        editBtn.innerText="Edit"
+        editBtn.style.background="green"
+        editBtn.style.color="white"
+        editBtn.style.borderRadius="10px"
+        editBtn.style.width="70px"
+        li.appendChild(editBtn);
+
+    
+    })
+
+</script>
