@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        h3 {
+            font-size: 36px;
+            color: orange;
+        }
+
+        button {
+            padding: 12px 40px 12px 40px;
+            color: black;
+            background-color: orange;
+            margin-top: 20px;
+            border-radius: 15px;
+            border: 1px solid white
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <center>
+        <h3>Calculate BMI</h3>
+        <form action="">
+            <label for="">Height</label>
+            <input type="number" class="height">
+            <br><br>
+            <label for="">Weight</label>
+            <input type="number" class="weight">
+            <br><br>
+            <button>Submit</button>
+            <h2>Result</h2>
+            <p class="result"></p>
+        </form>
+    </center>
+
+</body>
+</html>
+
+<script>
+   let form = document.querySelector("form")
+   form.addEventListener('submit',function(e){
+    e.preventDefault();
+    let height = document.querySelector(".height").value;
+    let weight = document.querySelector(".weight").value;
+    let result = document.querySelector(".result")
+
+    let calculation = weight*height;
+    result.innerHTML=calculation;
+   })
+   
+</script>
