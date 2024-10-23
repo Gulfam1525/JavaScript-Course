@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .time{
+            background-color: burlywood;
+            width: 140px;
+            height:60px;
+            border-radius: 30px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        h2{
+            font-size: 46px;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <h2>Time</h2>
+        <div class="time"></div>
+    </center>
+
+</body>
+</html>
+
+<script>
+    let time = document.querySelector(".time");
+
+    setInterval(function () {
+        let timenow = new Date()
+        time.innerHTML=timenow.toLocaleTimeString()
+    },1000)
+</script>

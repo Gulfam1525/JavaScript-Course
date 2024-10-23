@@ -83,10 +83,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        li:hover {
-            background: #e8e8e8;
-        }
-
        
     </style>
 </head>
@@ -122,14 +118,18 @@
         deleteBtn.innerText="Delete"
         deleteBtn.style.background="red"
         deleteBtn.style.color="white"
-        // deleteBtn.style.marginLeft="10px"
+        deleteBtn.style.marginLeft="10px"
         deleteBtn.style.borderRadius="10px"
         deleteBtn.style.width="70px"
         li.appendChild(deleteBtn);
 
+        
+        
+
         let editBtn = document.createElement("button");
         editBtn.innerText="Edit"
         editBtn.style.background="green"
+        editBtn.style.marginLeft="10px"
         editBtn.style.color="white"
         editBtn.style.borderRadius="10px"
         editBtn.style.width="70px"
