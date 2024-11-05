@@ -82,8 +82,6 @@
             transition: background 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-       
     </style>
 </head>
 <html>
@@ -104,7 +102,7 @@
 <script>
 
 
- 
+
     let textBtn = document.querySelector("#addTaskBtn")
     textBtn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -115,27 +113,31 @@
         ul.appendChild(li);
 
         let deleteBtn = document.createElement("button");
-        deleteBtn.innerText="Delete"
-        deleteBtn.style.background="red"
-        deleteBtn.style.color="white"
-        deleteBtn.style.marginLeft="10px"
-        deleteBtn.style.borderRadius="10px"
-        deleteBtn.style.width="70px"
+        deleteBtn.innerText = "Delete"
+        deleteBtn.style.background = "red"
+        deleteBtn.style.color = "white"
+        deleteBtn.style.marginLeft = "10px"
+        deleteBtn.style.borderRadius = "10px"
+        deleteBtn.style.width = "70px"
         li.appendChild(deleteBtn);
+        deleteBtn.addEventListener('click', function (e) {
+            li.remove();
+        })
 
-        
-        
+
+
 
         let editBtn = document.createElement("button");
-        editBtn.innerText="Edit"
-        editBtn.style.background="green"
-        editBtn.style.marginLeft="10px"
-        editBtn.style.color="white"
-        editBtn.style.borderRadius="10px"
-        editBtn.style.width="70px"
+        editBtn.innerText = "Edit"
+        editBtn.style.background = "green"
+        editBtn.style.marginLeft = "10px"
+        editBtn.style.color = "white"
+        editBtn.style.borderRadius = "10px"
+        editBtn.style.width = "70px"
         li.appendChild(editBtn);
+        document.querySelector("#taskInput").value="";
 
-    
+
     })
 
 </script>

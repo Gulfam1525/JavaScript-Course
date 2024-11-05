@@ -84,11 +84,9 @@
         let randomNum = Math.round(Math.random() * 10);
         remAtt--;
         attemptsRemaining.innerHTML=remAtt;
-
-     
-
         if (randomNum == guessInput) {
             feedback.innerHTML = "You Win";
+           
         }
         else {
             feedback.innerHTML = `Try Agian and Random num is ${randomNum}`;
@@ -97,9 +95,9 @@
         if(remAtt<=0){
             attemptsRemaining.innerHTML="Game Over"
             submitGuess.style.display="none";
+            guessInput.style.display="none";
             feedback.innerHTML ="GoodBye"
         }
-
 
     })
 

@@ -50,3 +50,4 @@
 17. Loops.
 18. Filter , Map and Reduce;
 19. DOM
+20. Events
