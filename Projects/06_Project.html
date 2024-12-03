@@ -4,116 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .quiz-container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        #question-container {
-            margin-bottom: 20px;
-        }
-
-        #question {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .options label {
-            display: block;
-            background: #f7f7f7;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .options input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        #next-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        #next-button:hover {
-            background-color: #45a049;
-        }
-
-        #score-container {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #333;
-        }
-    </style>
+    <title>To-Do List</title>
 </head>
 
 <body>
-    <div class="quiz-container">
-        <h1>Quiz App</h1>
-        <div id="question-container">
-            <p id="question">What is the capital of France?</p>
-            <div class="options">
-                <label>
-                    <input type="radio" name="option" value="1">
-                    <span>London</span>
-                </label>
-                <label>
-                    <input type="radio" name="option" value="2">
-                    <span>Paris</span>
-                </label>
-                <label>
-                    <input type="radio" name="option" value="3">
-                    <span>Berlin</span>
-                </label>
-                <label>
-                    <input type="radio" name="option" value="4">
-                    <span>Rome</span>
-                </label>
-            </div>
-        </div>
-        <button id="next-button">Next</button>
-        <p id="score-container">Score: <span id="score">0</span></p>
-    </div>
 
-    <script src="script.js"></script>
+    <h1>My To-Do List</h1>
+
+    <!-- Form to add tasks -->
+    <form id="taskForm">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" required>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description">
+
+        <label for="status">Status:</label>
+        <select id="status">
+            <option value="Complete">Complete</option>
+            <option value="Pending">Pending</option>
+            <option value="Ongoing">Ongoing</option>
+        </select>
+
+        <label for="dateTime">Date and Time:</label>
+        <input type="datetime-local" id="dateTime" required>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Table to display tasks -->
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Date and Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
 </body>
+
 </html>
 
 <script>
-    
+
+
+
+
+    function loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const tableBody = document.getElementById('taskTable').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = '';
+
+        tasks.forEach(function (task, index) {
+            let row = tableBody.insertRow();
+            row.innerHTML = `
+            <td>${task.name}</td>
+            <td>${task.description}</td>
+            <td>${task.status}</td>
+            <td>${task.dateTime}</td>
+            <td>
+                <button onclick="editTask(${index})">Edit</button>
+                <button onclick="deleteTask(${index})">Delete</button>
+            </td>
+        `;
+        });
+    }
+
+
+    document.getElementById('taskForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('taskName').value;
+        const description = document.getElementById('description').value;
+        const status = document.getElementById('status').value;
+        const dateTime = document.getElementById('dateTime').value;
+
+
+        const task = {
+            name,
+            description,
+            status,
+            dateTime
+        };
+
+
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        tasks.push(task);
+
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+
+        document.getElementById('taskForm').reset();
+
+        loadTasks();
+    });
+
+
+    function editTask(index) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const task = tasks[index];
+
+        document.getElementById('taskName').value = task.name;
+        document.getElementById('description').value = task.description;
+        document.getElementById('status').value = task.status;
+        document.getElementById('dateTime').value = task.dateTime;
+
+
+        tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        loadTasks();
+    }
+
+
+    function deleteTask(index) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        loadTasks();
+    }
+
 </script>
